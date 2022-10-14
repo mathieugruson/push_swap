@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   doublerotate.c                                     :+:      :+:    :+:   */
+/*   get_current_pos.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 16:45:53 by mgruson           #+#    #+#             */
-/*   Updated: 2022/09/10 16:51:20 by mgruson          ###   ########.fr       */
+/*   Created: 2022/09/07 17:42:31 by mgruson           #+#    #+#             */
+/*   Updated: 2022/10/14 19:11:17 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void doublerotate(t_list **a, t_list **b)
+void	get_current_pos(t_list *a, t_list *b)
 {
-	rotate(a);
-	rotate(b);
+	int	i;
+
+	i = 1;
+	while(a)
+	{
+		a->current_pos = i;
+		a = a->next;
+		i++;
+	}
+	i = 1;
+	while(b)
+	{
+		b->current_pos = i;
+		b = b->next;
+		i++;
+	}
 }

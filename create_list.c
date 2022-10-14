@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:51:41 by mgruson           #+#    #+#             */
-/*   Updated: 2022/09/07 17:50:09 by mgruson          ###   ########.fr       */
+/*   Updated: 2022/10/14 19:09:52 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ t_list *create_list(t_list **lst, char **argv, int argc)
 	tmp = NULL;
 	
 	*lst = ft_lstnew(argv[argc_cpy++]);
-	find_final_position(lst, argv);
+	get_final_pos(lst, argv);
 	while(argc_cpy != argc)
 	{
 		tmp = ft_lstnew(argv[argc_cpy]);
-		find_final_position(&tmp, argv);
+		get_final_pos(&tmp, argv);
 		ft_lstadd_back(*lst, tmp);
 		argc_cpy++;
 	}
-	update_current_positions(*lst, NULL);
+	get_current_pos(*lst, NULL);
 	return (*lst);
 }

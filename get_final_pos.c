@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_final_position.c                              :+:      :+:    :+:   */
+/*   get_final_pos.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:41:51 by mgruson           #+#    #+#             */
-/*   Updated: 2022/09/07 17:51:03 by mgruson          ###   ########.fr       */
+/*   Updated: 2022/10/14 19:17:49 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_final_position(t_list **lst, char **argv)
+int	get_final_pos(t_list **lst, char **argv)
 {
 	int	i;
 	int	position;

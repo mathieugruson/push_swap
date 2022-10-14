@@ -3,14 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/12 17:32:06 by mgruson           #+#    #+#             */
-/*   Updated: 2022/09/12 14:42:55 by mgruson          ###   ########.fr       */
+/*   Created: 2022/10/14 17:03:13 by mathieug          #+#    #+#             */
+/*   Updated: 2022/10/14 19:47:39 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	pa(t_list **src, t_list **dst)
+{
+    push(src, dst);
+	write(1, "pa\n", 3);
+}
+
+void	pb(t_list **src, t_list **dst)
+{
+    push(src, dst);
+	write(1, "pb\n", 3);
+}
 
 t_list	*push(t_list **src, t_list **dst)
 {	
@@ -22,6 +34,6 @@ t_list	*push(t_list **src, t_list **dst)
 	(*src)->next = *dst;
 	*dst = *src;
 	*src = tmp;
-	update_current_positions(*src, *dst);
+	get_current_pos(*src, *dst);
 	return (tmp);
 }

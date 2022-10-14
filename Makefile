@@ -5,20 +5,19 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRC = check_errors.c \
 		check_sorting.c \
+		create_list.c \
+		get_cost_move.c \
+		get_current_pos.c \
+		get_final_pos.c \
 		push.c \
+		main.c \
+		swap.c \
 		reverse.c \
 		rotate.c \
-		swap.c \
-		push_swap.c \
-		create_list.c \
 		sort_list.c \
-		find_final_position.c \
-		update_current_positions.c \
-		update_costs_move.c \
-		fill_list.c \
-		doublerotate.c \
-		doublereverse.c \
-		
+		sort_up_to_three.c \
+		sort_after_three.c \
+
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)

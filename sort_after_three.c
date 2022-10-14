@@ -1,48 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   sort_after_three.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 17:03:03 by mathieug          #+#    #+#             */
-/*   Updated: 2022/10/14 19:47:26 by mathieug         ###   ########.fr       */
+/*   Created: 2022/10/14 18:41:36 by mathieug          #+#    #+#             */
+/*   Updated: 2022/10/14 20:11:13 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*swap(t_list **lst)
+void empty_up_to_three(t_list **a, t_list **b)
 {
-	t_list	*second;
-	t_list	*third;
+    int alen;
+    
+    alen = ft_lstlen(*a);
 
-	second = (*lst)->next; 
-	third = second->next; 
-	
-	(*lst)->next = third; 
-	second->next =  *lst; 
-	
-	*lst = second;
-	get_current_pos(*lst, NULL);
-	return (second);
+    while (ft_lstlen(*a) != alen / 2 && ft_lstlen(*a) > 3)
+    {
+        if ((*a)->final_pos <= alen / 2)
+            pb(a, b);
+        if ((*a)->final_pos > alen / 2)
+            ra(a); 
+    }
+    while (ft_lstlen(*a) != 3)
+        pb(a, b);
 }
 
-void	sa(t_list **lst)
+void sort_after_three(t_list **a, t_list **b)
 {
-    swap(lst);
-	write(1, "sa\n", 3);
-}
-
-void	sb(t_list **lst)
-{
-    swap(lst);
-	write(1, "sb\n", 3);
-}
-
-void	ss(t_list **a, t_list **b)
-{
-    swap(a);
-    swap(b);
-	write(1, "ss\n", 3);
+	empty_up_to_three(a, b);
+	sort_up_to_three(a);
 }

@@ -1,19 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   doublereverse.c                                    :+:      :+:    :+:   */
+/*   get_cost_move.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 16:48:03 by mgruson           #+#    #+#             */
-/*   Updated: 2022/09/10 16:50:51 by mgruson          ###   ########.fr       */
+/*   Created: 2022/09/07 18:20:47 by mgruson           #+#    #+#             */
+/*   Updated: 2022/10/14 19:19:32 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void doublereverse(t_list **a, t_list **b)
-{
-	reverse(a);
-	reverse(b);
-}

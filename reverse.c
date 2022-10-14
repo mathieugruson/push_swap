@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/12 23:17:02 by mgruson           #+#    #+#             */
-/*   Updated: 2022/09/07 19:49:54 by mgruson          ###   ########.fr       */
+/*   Created: 2022/10/14 17:03:09 by mathieug          #+#    #+#             */
+/*   Updated: 2022/10/14 19:47:01 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,25 @@ t_list	*reverse(t_list **lst)
 	before_last->next = NULL; 
 	last->next = *lst;
 	*lst = last;
-	update_current_positions(*lst, NULL);
+	get_current_pos(*lst, NULL);
 	return (*lst);
+}
+
+void	rra(t_list **lst)
+{
+    reverse(lst);
+	write(1, "rra\n", 4);
+}
+
+void	rrb(t_list **lst)
+{
+    reverse(lst);
+	write(1, "rrb\n", 4);
+}
+
+void	rrr(t_list **a, t_list **b)
+{
+    reverse(a);
+    reverse(b);
+	write(1, "rrr\n", 4);
 }

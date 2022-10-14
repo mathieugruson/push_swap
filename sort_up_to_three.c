@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   update_current_positions.c                         :+:      :+:    :+:   */
+/*   sort_up_to_three.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 17:42:31 by mgruson           #+#    #+#             */
-/*   Updated: 2022/09/07 17:50:43 by mgruson          ###   ########.fr       */
+/*   Created: 2022/10/14 18:41:56 by mathieug          #+#    #+#             */
+/*   Updated: 2022/10/14 19:58:09 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	update_current_positions(t_list *a, t_list *b)
+void	sort_up_to_three(t_list **lst)
 {
-	int	i;
+	int	lstlen;
 
-	i = 1;
-	while(a)
+	lstlen = ft_lstlen(*lst);
+	if (lstlen == 2)
+		sa(lst);
+	while (check_sorting(lst, lstlen) == 0)
 	{
-		a->current_pos = i;
-		a = a->next;
-		i++;
-	}
-	i = 1;
-	while(b)
-	{
-		b->current_pos = i;
-		b = b->next;
-		i++;
+		if ((*lst)->final_pos > (*lst)->next->final_pos)
+			sa(lst);
+		else if ((*lst)->next->final_pos > (*lst)->final_pos)
+			rra(lst);
 	}
 }
