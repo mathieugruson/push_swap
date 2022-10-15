@@ -6,7 +6,7 @@
 /*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:43:27 by mgruson           #+#    #+#             */
-/*   Updated: 2022/10/14 19:32:59 by mathieug         ###   ########.fr       */
+/*   Updated: 2022/10/15 20:59:17 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ size_t	ft_strlen(const char *s);
 typedef struct s_list
 {
 	void			*content;
-	int				current_pos; // pos
-	int				final_pos; // index
+	int				current_pos; 
+	int				final_pos; 
 	int				target_pos; 
 	int				cost_a;
 	int				cost_b;
