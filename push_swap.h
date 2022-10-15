@@ -6,7 +6,7 @@
 /*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 14:30:57 by mgruson           #+#    #+#             */
-/*   Updated: 2022/10/15 12:11:46 by mathieug         ###   ########.fr       */
+/*   Updated: 2022/10/15 19:23:29 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,12 @@ int     get_final_pos(t_list **lst, char **argv);
 int     highest_value_exist_in(t_list *a, t_list *b);
 t_list  *lowest_value_of(t_list *a);
 int     nearest_value_higher_of(t_list *a, t_list *b);
+int     target_pos_index(t_list *a, t_list *b);
 void    get_target_pos(t_list **a, t_list **b);
 int     no_sign(int   nbr);
 t_list  *find_cheapest_element(t_list **b);
+void    double_move_to_do(t_list **a, t_list **b, t_list *cheapest_node);
+void    simple_move_to_do(t_list **a, t_list **b, t_list *cheapest_node);
 void    move_cheapest_element(t_list **a, t_list **b);
 void	pa(t_list **src, t_list **dst);
 void	pb(t_list **src, t_list **dst);
@@ -53,6 +56,5 @@ void	sa(t_list **lst);
 void	sb(t_list **lst);
 void	ss(t_list **a, t_list **b);
 t_list	*swap(t_list **lst);
-
 
 #endif 

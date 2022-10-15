@@ -6,7 +6,7 @@
 /*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 18:41:36 by mathieug          #+#    #+#             */
-/*   Updated: 2022/10/15 12:34:46 by mathieug         ###   ########.fr       */
+/*   Updated: 2022/10/15 20:43:20 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,15 @@ void sort_after_three(t_list **a, t_list **b)
     while(*b)
     {
         get_target_pos(a, b);
+        // printf("List A during sorting:\n");
+	    // ft_print_list(*a);
+	    // printf("List B during sorting:\n");
+	    // ft_print_list(*b);
         get_cost_move(a, b);
-        printf("List A during sorting:\n");
-	    ft_print_list(*a);
-	    printf("List B during sorting:\n");
-	    ft_print_list(*b);
+        // printf("List A during sorting:\n");
+	    // ft_print_list(*a);
+	    // printf("List B during sorting:\n");
+	    // ft_print_list(*b);
         move_cheapest_element(a, b);
     }
     if (!check_sorting(a, ft_lstlen(*a)))
