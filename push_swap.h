@@ -6,7 +6,7 @@
 /*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 14:30:57 by mgruson           #+#    #+#             */
-/*   Updated: 2022/10/14 19:46:43 by mathieug         ###   ########.fr       */
+/*   Updated: 2022/10/15 12:11:46 by mathieug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,13 @@ int     get_cost_move_a(t_list *a, t_list *b, int a_len, int b_len);
 void    get_cost_move(t_list **a, t_list **b);
 void    get_current_pos(t_list *a, t_list *b);
 int     get_final_pos(t_list **lst, char **argv);
+int     highest_value_exist_in(t_list *a, t_list *b);
+t_list  *lowest_value_of(t_list *a);
+int     nearest_value_higher_of(t_list *a, t_list *b);
+void    get_target_pos(t_list **a, t_list **b);
+int     no_sign(int   nbr);
+t_list  *find_cheapest_element(t_list **b);
+void    move_cheapest_element(t_list **a, t_list **b);
 void	pa(t_list **src, t_list **dst);
 void	pb(t_list **src, t_list **dst);
 t_list	*push(t_list **src, t_list **dst);
@@ -38,7 +45,7 @@ void	ra(t_list **lst);
 void	rb(t_list **lst);
 void	rr(t_list **a, t_list **b);
 t_list	*rotate(t_list **lst);
-void    empty_up_to_three(t_list **a, t_list **b);
+void    empty_unless_three(t_list **a, t_list **b);
 void    sort_after_three(t_list **a, t_list **b);
 void    sort_list(t_list **a, t_list **b);
 void	sort_up_to_three(t_list **lst);

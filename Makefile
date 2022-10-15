@@ -9,14 +9,16 @@ SRC = check_errors.c \
 		get_cost_move.c \
 		get_current_pos.c \
 		get_final_pos.c \
-		push.c \
+		get_target_pos.c \
 		main.c \
-		swap.c \
+		move_cheapest.c \
+		push.c \
 		reverse.c \
 		rotate.c \
+		sort_after_three.c \
 		sort_list.c \
 		sort_up_to_three.c \
-		sort_after_three.c \
+		swap.c \
 
 OBJ = $(SRC:.c=.o)
 
