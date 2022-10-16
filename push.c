@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 17:03:13 by mathieug          #+#    #+#             */
-/*   Updated: 2022/10/14 19:47:39 by mathieug         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:21:08 by mgruson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 void	pa(t_list **src, t_list **dst)
 {
-    push(src, dst);
+	push(src, dst);
 	write(1, "pa\n", 3);
 }
 
 void	pb(t_list **src, t_list **dst)
 {
-    push(src, dst);
+	push(src, dst);
 	write(1, "pb\n", 3);
 }
 
 t_list	*push(t_list **src, t_list **dst)
 {	
 	t_list	*tmp;
-	
+
 	if (*src == NULL)
-		return (NULL); 
-	tmp = (*src)->next;	
+		return (NULL);
+	tmp = (*src)->next;
 	(*src)->next = *dst;
 	*dst = *src;
 	*src = tmp;

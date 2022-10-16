@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathieug <mathieug@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:43:27 by mgruson           #+#    #+#             */
-/*   Updated: 2022/10/15 20:59:17 by mathieug         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:19:25 by mgruson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,12 @@ size_t	ft_strlen(const char *s);
 typedef struct s_list
 {
 	void			*content;
-	int				current_pos; 
-	int				final_pos; 
-	int				target_pos; 
+	int				current_pos;
+	int				final_pos;
+	int				target_pos;
 	int				cost_a;
 	int				cost_b;
 	struct s_list	*next;
-	
 }					t_list;
 
 t_list	*ft_lstnew(void *content);
@@ -45,7 +44,6 @@ void	ft_lstadd_front(t_list *lst, t_list *new);
 int		ft_lstlen(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list *lst, t_list *new);
-
 
 /* extra functions */
 
