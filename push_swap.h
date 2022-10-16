@@ -6,7 +6,7 @@
 /*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 14:30:57 by mgruson           #+#    #+#             */
-/*   Updated: 2022/10/16 13:59:37 by mgruson          ###   ########.fr       */
+/*   Updated: 2022/10/16 16:44:48 by mgruson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,10 @@ void	rb(t_list **lst);
 void	rr(t_list **a, t_list **b);
 t_list	*rotate(t_list **lst);
 void	empty_unless_three(t_list **a, t_list **b);
-void	sort_after_three(t_list **a, t_list **b);
+void	sort_after_five(t_list **a, t_list **b);
 void	sort_list(t_list **a, t_list **b);
-void	sort_up_to_three(t_list **lst);
+void	sort_three(t_list **lst);
+void	sort_five(t_list **a, t_list **b);
 void	sa(t_list **lst);
 void	sb(t_list **lst);
 void	ss(t_list **a, t_list **b);

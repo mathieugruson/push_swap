@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_list.c                                        :+:      :+:    :+:   */
+/*   sort_four_five.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 15:28:21 by mgruson           #+#    #+#             */
-/*   Updated: 2022/10/16 16:45:55 by mgruson          ###   ########.fr       */
+/*   Created: 2022/10/16 16:33:32 by mgruson           #+#    #+#             */
+/*   Updated: 2022/10/16 16:43:34 by mgruson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_list(t_list **a, t_list **b)
+void	sort_five(t_list **a, t_list **b)
 {
-	int	lstlen;
-
-	if (check_sorting(a, ft_lstlen(*a)))
-		return ;
-	lstlen = ft_lstlen(*a);
-	if (lstlen == 2)
-		sa(a);
-	if (lstlen == 3)
-		sort_three(a);
-	if (lstlen == 5)
-		sort_five(a, b);
-	if (lstlen == 4 || lstlen > 5)
-		sort_after_five(a, b);
+	while (ft_lstlen(*a) > 3)
+	{
+		if ((*a)->final_pos < 3)
+			pb(a, b);
+		else
+			ra(a);
+	}
+	sort_three(a);
+	if ((*b)->final_pos < (*b)->next->final_pos)
+		sb(b);
+	while (*b)
+		pa(b, a);
 }

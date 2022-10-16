@@ -15,9 +15,10 @@ SRC = check_errors.c \
 		push.c \
 		reverse.c \
 		rotate.c \
-		sort_after_three.c \
+		sort_three.c \
+		sort_five.c \
 		sort_list.c \
-		sort_up_to_three.c \
+		sort_after_five.c \
 		swap.c \
 
 OBJ = $(SRC:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 15:06:09 by mgruson           #+#    #+#             */
-/*   Updated: 2022/10/16 14:01:11 by mgruson          ###   ########.fr       */
+/*   Updated: 2022/10/16 16:20:37 by mgruson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
+	if (!argv[1])
+		return (0);
 	if (check_errors(argv, argc) > 0)
 		return (write(2, "Error\n", 6));
 	create_list(&a, argv, argc);

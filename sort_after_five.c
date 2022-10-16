@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_after_three.c                                 :+:      :+:    :+:   */
+/*   sort_after_five.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgruson <mgruson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 18:41:36 by mathieug          #+#    #+#             */
-/*   Updated: 2022/10/16 14:15:09 by mgruson          ###   ########.fr       */
+/*   Updated: 2022/10/16 16:41:05 by mgruson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ void	empty_unless_three(t_list **a, t_list **b)
 		pb(a, b);
 }
 
-void	sort_after_three(t_list **a, t_list **b)
+void	sort_after_five(t_list **a, t_list **b)
 {
 	empty_unless_three(a, b);
-	sort_up_to_three(a);
+	sort_three(a);
 	while (*b)
 	{
 		get_target_pos(a, b);
